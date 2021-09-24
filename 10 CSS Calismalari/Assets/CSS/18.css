@@ -1,0 +1,24 @@
+.kutu {
+  /*width: 70px;
+  height: 70px; height'ı align-items:stretch yaparken kaldırmamız lazım*/
+  background-color: hotpink;
+  border: 1px solid blue;
+}
+.kutu1 {
+  flex: 1; /*flex'e verdigimiz deger ile sayfaya yerlesiyorlar orantılı olarak*/
+}
+.kutu2 {
+  flex: 3;
+}
+.kutu3 {
+  flex: 1;
+}
+.kutular {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /*flex-direction, default degeri row dur yani satır olarak yerleştirir.Coloumn yaparsak flex-direction'ı sütun olarak sıralar.*/
+  flex-wrap: wrap; /*sığmayan elemanı aşağı atmak için. Default'u no-wrap'tir*/
+  justify-content: space-evenly;
+  background-color: blue;
+  height: 400px;
+}

@@ -1,0 +1,12 @@
+.textbox {
+  display: inline-block;
+  position: relative;
+}
+.textbox .fa-search {
+  position: absolute; /*Bir elemanın positionını absolute yaparsak o elemanın parentını relative yapmak zorundayız. Böylece childı parentta istedigimiz gibi konumlandırabiliriz*/
+  right: 5px;
+  top: 3px;
+}
+.textbox input {
+  padding-right: 25px;
+}

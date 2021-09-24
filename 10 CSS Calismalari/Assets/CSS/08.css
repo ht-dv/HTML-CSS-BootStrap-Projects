@@ -1,0 +1,19 @@
+.menu ul {
+  list-style: none; /*listenin başındaki simgeleri kaldırdık*/
+}
+.menu li {
+  display: inline-block; /*inline-block aslında inline gibi ama margin ve padding gibi özelliklere olanak veriyor*/
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgb(255, 143, 102);
+  border-radius: 10px; /* çerçeveyi yuvarlaklaştırıyor kenarlardan*/
+}
+.menu a:hover {
+  /*hover mouse ile üzerine gelince bir değişiklik yapma imkanı veriyor*/
+  background-color: rgb(151, 72, 43);
+  color: white;
+}

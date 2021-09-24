@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formlar</title>
+  </head>
+  <body>
+    <h1>Kayıt Formu</h1>
+
+    <form action="server/kayit.php" method="POST">
+      <input type="hidden" name="id" value="1234567" />
+      <p>
+        <label for="ad">Adınız</label>
+        <input id="ad" type="text" value="Ali" required />
+        <!--for ile id'yi eşitlediğimizde label ve inputu eşitlemiş oluyoruz-->
+      </p>
+      <p>
+        <label for="soyad">Soyadınız</label>
+        <input
+          id="soyad"
+          type="text"
+          placeholder="Soyadınızı giriniz"
+          value="Koc"
+          disabled
+        />
+        <!--disabled yazınca kullanılamaz, değiştirilemez hale getiriyoruz.-->
+      </p>
+      <p>
+        <label for="sifre">Şifreniz</label>
+        <input
+          id="sifre"
+          type="password"
+          placeholder="Sifrenizi giriniz"
+          required
+          minlength="6"
+          maxlength="10"
+        />
+      </p>
+      <p>
+        <label for="deneyim">Deneyim</label>
+        <input id="deneyim" type="number" min="0" max="10" />
+      </p>
+      <!-- <p>
+        <label for="ara">Ara</label>
+        <input id="ara" type="search" />
+      </p>-->
+      <p>
+        <label>Hobileriniz</label>
+        <br />
+
+        <input type="checkbox" name="futbol" id="futbol" value="futbol" />
+        <label for="futbol">Futbol</label>
+        <br />
+
+        <input
+          type="checkbox"
+          name="basketbol"
+          id="basketbol"
+          value="basketbol"
+        />
+        <label for="basketbol">Basketbol</label>
+        <br />
+
+        <input
+          type="checkbox"
+          name="voleybol"
+          id="voleybol"
+          value="voleybol"
+          checked
+        />
+        <!--checked eklersek tikli gelir bize-->
+        <label for="voleybol">Voleybol</label>
+      </p>
+      <p>
+        <label for="cinsiyet">Cinsiyet</label><br />
+        <input type="radio" name="cinsiyet" id="erkek" value="erkek" />
+        <label for="erkek">Erkek</label><br />
+        <!--bu üst ve altta radio'nun işlevini yerine getirmesi için nameler ayni olmalı (cinsiyet) gruplamalıyız seçimi öyle yaptırıyor-->
+        <input type="radio" name="cinsiyet" id="kadin" value="kadin" />
+        <label for="kadin">Kadin</label><br />
+      </p>
+
+      <p>
+        <label for="medeni">Medeni Hali</label><br />
+        <input type="radio" name="medeni_hal" id="evli" value="evli" />
+        <label for="evli">Evli</label><br />
+        <input type="radio" name="medeni_hal" id="bekar" value="bekar" />
+        <label for="bekar">Bekar</label><br />
+      </p>
+      <p>
+        <label for="">Avatar</label>
+        <input type="file" name="avatar" id="avatar" />
+      </p>
+
+      <p>
+        <label for="dogum">Doğum Tarihi</label>
+        <input type="date" name="dogum" id="dogum" />
+      </p>
+
+      <p>
+        <label for="zaman">Doğum Saati</label>
+        <input type="time" name="zaman" id="zaman" />
+      </p>
+
+      <p>
+        <label for="dogum_yeri">Doğum Yeri</label>
+        <select name="dogum_yeri" id="dogum_yeri">
+          <option value="1">Adana</option>
+          <option value="2">Adıyaman</option>
+          <option value="3">Afyon</option>
+          <option value="4">Ağrı</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="adres">Adres</label><br />
+        <textarea name="adres" id="adres" cols="30" rows="10"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Gönder" />
+
+        <!--Bu üst satırda type için button yazsak buton oluşturuyor ama işlev yok. Submit yazınca formu gönderiyor, buradaki işlevleri biz belirliyoruz-->
+        <input type="button" value="Kontrol Et" />
+        <!--buton'u javascript ile bizim methoda bağlamamız lazım. Tek başına burda bir şey yapamıyoruz-->
+        <input type="reset" value="Temizle" />
+      </p>
+    </form>
+  </body>
+</html>

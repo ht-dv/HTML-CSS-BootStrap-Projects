@@ -1,0 +1,18 @@
+.kutu {
+  background-color: red;
+  text-align: center;
+}
+.kutu b {
+  background-color: blue;
+}
+.kutu2 {
+  margin-top: 20px;
+  background-color: green; /*kutu 2 ve p ikisi de block eleman oldugu icin renklendirince tum satiri kaplar*/
+  /*text-align: ile hizalanmaz block elemanlar, margin ile hizalanmali*/
+}
+.kutu2 p {
+  background-color: orange;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+}
